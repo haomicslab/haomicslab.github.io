@@ -1,0 +1,152 @@
+/* 全局基础样式 */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 25px 25px;
+}
+
+/* 导航栏 统一布局：左侧Logo + 右侧菜单 */
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Logo 尺寸 */
+.logo img {
+    height: 30px;
+    width: auto;
+}
+
+/* 导航菜单容器 */
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+/* 导航链接基础样式 */
+.menu a {
+    text-decoration: none;
+    color: #444;
+    font-size: 16px;
+    padding: 6px 8px;
+}
+
+/* 链接悬浮效果 */
+.menu a:hover {
+    color: #2980b9;
+}
+
+/* 当前页面高亮激活态 */
+.menu a.active {
+    color: #2980b9;
+    font-weight: 500;
+    border-bottom: 2px solid #2980b9;
+}
+
+/* 标题样式 */
+h1, h2 {
+    color: #222;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+/* 列表样式（论文列表通用） */
+ul {
+    padding-left: 22px;
+}
+
+li {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+/* 页脚 */
+#footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+/* 个人姓名：黑色加粗 */
+.me {
+    font-weight: bold;
+    color: #000;
+}
+
+/* 论文说明行链接样式 */
+.pub-desc {
+    margin: 12px 0 20px 0;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+.pub-desc a {
+    color: #2980b9;
+    text-decoration: none;
+}
+.pub-desc a:hover {
+    text-decoration: underline;
+}
+
+/* 标注颜色：共同一作 # / 共同通讯 * */
+.co-first {
+    color: #c0392b;
+    font-weight: 500;
+}
+.corr {
+    color: #2980b9;
+    font-weight: 500;
+}
+
+/* ========== 移动端适配（手机/平板）核心 ========== */
+@media (max-width: 768px) {
+    /* 导航栏改为竖排居中 */
+    #nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* 菜单自适应，紧凑排布 */
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* 全局字号微调，手机更舒适 */
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    li {
+        font-size: 15px;
+    }
+}

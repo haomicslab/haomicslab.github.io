@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Haomics Lab | Home</title>
+    <link rel="stylesheet" href="jemdoc.css">
+    <style>
+        /* 头部图文容器：左右布局 */
+        .header-wrap {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        /* 文字区域 */
+        .header-text {
+            flex: 1;
+        }
+        /* 头像样式 */
+        .pi-photo img {
+            width: 180px;      /* 图片宽度，自行调整 */
+            height: auto;
+            border-radius: 4px;/* 圆角，不想圆角删掉此行 */
+            box-shadow: 0 1px 3px #ddd; /* 轻微阴影，可选 */
+        }
+        /* 移动端：改为上下排列 */
+        @media (max-width: 768px) {
+            .header-wrap {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="nav">
+    <!-- 左侧 Logo -->
+    <div class="logo">
+        <img src="logo.png" alt="Haomics Lab Logo">
+    </div>
+
+    <!-- 右侧导航菜单 -->
+    <div class="menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="team.html">Team</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+    </div>
+</div>
+
+<div id="content">
+    <!-- 图文并排容器 -->
+    <div class="header-wrap">
+        <div class="header-text">
+            <h1>Xingjie Hao</h1>
+            <p>
+                Associate Professor <br>
+                Department of Biostatistics <br>
+                School of Public Health <br>
+                Huazhong University of Science and Technology
+            </p>
+        </div>
+        <!-- PI 照片区域，替换 src 为你的图片文件名 -->
+        <div class="pi-photo">
+            <img src="xingjie.jpg" alt="Xingjie Hao">
+        </div>
+    </div>
+
+    <h2>About Us</h2>
+    <p>
+        Welcome to Haomics Lab. Our research focuses on genomics and population health. We develop and apply cutting-edge statistical genomics and bioinformatics methods to dissect the genetic mechanisms underlying complex human diseases and improve disease risk prediction.
+    </p>
+    <p>
+        Our methodological research integrates statistical learning and artificial intelligence frameworks to analyze high-dimensional multi-omics data. We develop novel statistical models and computational algorithms, with a particular emphasis on polygenic risk scoring (PRS) and nonlinear omics association methods.
+    </p>
+    <p>
+        We further employ a comprehensive suite of genomic analytical strategies, including GWAS, TWAS, PWAS, PheWAS, MR, and Coloc, to systematically dissect the genetic architecture of complex traits and diseases. Our current research applications primarily center on cardiovascular, metabolic, and urinary system disorders.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+        Email: xingjie@hust.edu <br>
+        Office: Room 323, 1st Building SPH <br>
+        Address: 13 Hangkong Rd, Qiaokou Dist, Wuhan 430030, Hubei, P.R.China
+    </p>
+</div>
+
+<div id="footer">
+    &copy; 2026 Xingjie Hao
+</div>
+</body>
+</html>
