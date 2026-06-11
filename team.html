@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Haomics Lab | Team </title>
     <link rel="stylesheet" href="jemdoc.css">
+    <style>
+        /* 三列布局样式 */
+        .three-col-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 20px 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px 15px;
+        }
+        .three-col-list li {
+            padding: 2px 0;
+        }
+        /* 适配手机端：小屏幕自动变回单列 */
+        @media (max-width: 768px) {
+            .three-col-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 <div id="nav">
@@ -28,7 +48,7 @@
         <p>Xingjie Hao</p>
 
         <h2>Ph.D. Students</h2>
-        <ul>
+        <ul class="three-col-list">
             <li>Yifan Kong (2023-  )</li>
             <li>Xi Cao (2024-  )</li>
             <li>Siyu Zhu (2025-  )</li> 
@@ -37,7 +57,7 @@
         </ul>
        
         <h2>M.M. Students</h2>
-        <ul>
+        <ul class="three-col-list">
             <li>Shizheng Xiang (2024-  )</li>
             <li>Yuge Ye (2024-  )</li>
             <li>Zilin Lai (2025-  )</li>
