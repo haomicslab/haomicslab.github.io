@@ -43,7 +43,7 @@ body {
 .menu a {
     text-decoration: none;
     color: #444;
-    font-size: 16px;
+    font-size: 17px;
     padding: 6px 8px;
     transition: color 0.2s ease;
 }
@@ -68,11 +68,11 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 30px;
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 23px;
     margin-top: 30px;
 }
 
@@ -83,15 +83,21 @@ ul {
 
 li {
     margin-bottom: 12px;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.7;
+}
+
+/* 列表项悬浮高亮 */
+li:hover {
+    background-color: #f9f9f9;
+    border-radius: 4px;
 }
 
 /* 页脚 */
 #footer {
     margin-top: 50px;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
     color: #777;
     border-top: 1px solid #eee;
     padding-top: 15px;
@@ -106,7 +112,7 @@ li {
 /* 论文说明行链接样式 */
 .pub-desc {
     margin: 12px 0 20px 0;
-    font-size: 15px;
+    font-size: 16px;
     color: #555;
     line-height: 1.6;
 }
@@ -118,7 +124,7 @@ li {
     text-decoration: underline;
 }
 
-/* 标注颜色 + 上标样式（合并重复规则） */
+/* 标注颜色 */
 .co-first {
     color: #c0392b;
     font-weight: 500;
@@ -127,21 +133,18 @@ li {
     color: #2980b9;
     font-weight: 500;
 }
+
+/* 控制上标字号，原生sup自带上标效果 */
 .co-first, .corr {
-    vertical-align: super;
     font-size: 0.8em;
-    line-height: 1; /* 解决上标行高偏移 */
 }
 
-/* 期刊样式：斜体+加粗 */
+/* 期刊：斜体 + 加粗 */
 em {
     font-style: italic;
     font-weight: bold;
 }
-li:hover {
-    background-color: #f9f9f9;
-    border-radius: 4px;
-}
+
 /* ========== 移动端适配（手机/平板） ========== */
 @media (max-width: 768px) {
     /* 导航栏竖排居中 */
@@ -157,20 +160,20 @@ li:hover {
         gap: 15px;
     }
 
-    /* 全局字号适配 */
+    /* 移动端全局字号适配 */
     body {
-        font-size: 15px;
+        font-size: 16px;
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 21px;
     }
 
     li {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
