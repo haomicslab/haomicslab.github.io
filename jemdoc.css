@@ -1,14 +1,20 @@
 /* 全局基础样式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.6;
+    line-height: 1.65;
     color: #333;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 25px 25px;
 }
 
-/* 导航栏 统一布局：左侧Logo + 右侧菜单 */
+/* 导航栏：左侧Logo + 右侧菜单 */
 #nav {
     display: flex;
     align-items: center;
@@ -23,12 +29,14 @@ body {
 .logo img {
     height: 30px;
     width: auto;
+    display: block;
 }
 
 /* 导航菜单容器 */
 .menu {
     display: flex;
     gap: 25px;
+    flex-wrap: wrap;
 }
 
 /* 导航链接基础样式 */
@@ -37,6 +45,7 @@ body {
     color: #444;
     font-size: 16px;
     padding: 6px 8px;
+    transition: color 0.2s ease;
 }
 
 /* 链接悬浮效果 */
@@ -55,6 +64,7 @@ body {
 h1, h2 {
     color: #222;
     font-weight: normal;
+    margin-bottom: 1rem;
 }
 
 h1 {
@@ -74,6 +84,7 @@ ul {
 li {
     margin-bottom: 12px;
     font-size: 16px;
+    line-height: 1.7;
 }
 
 /* 页脚 */
@@ -107,7 +118,7 @@ li {
     text-decoration: underline;
 }
 
-/* 标注颜色：共同一作 # / 共同通讯 * */
+/* 标注颜色 + 上标样式（合并重复规则） */
 .co-first {
     color: #c0392b;
     font-weight: 500;
@@ -116,24 +127,37 @@ li {
     color: #2980b9;
     font-weight: 500;
 }
+.co-first, .corr {
+    vertical-align: super;
+    font-size: 0.8em;
+    line-height: 1; /* 解决上标行高偏移 */
+}
 
-/* ========== 移动端适配（手机/平板）核心 ========== */
+/* 期刊样式：斜体+加粗 */
+em {
+    font-style: italic;
+    font-weight: bold;
+}
+li:hover {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+/* ========== 移动端适配（手机/平板） ========== */
 @media (max-width: 768px) {
-    /* 导航栏改为竖排居中 */
+    /* 导航栏竖排居中 */
     #nav {
         flex-direction: column;
         gap: 15px;
         text-align: center;
     }
 
-    /* 菜单自适应，紧凑排布 */
+    /* 菜单紧凑居中排布 */
     .menu {
-        flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
 
-    /* 全局字号微调，手机更舒适 */
+    /* 全局字号适配 */
     body {
         font-size: 15px;
     }
@@ -149,9 +173,4 @@ li {
     li {
         font-size: 15px;
     }
-}
-
-em {
-    font-style: italic;
-    font-weight: bold;
 }
