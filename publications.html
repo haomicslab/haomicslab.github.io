@@ -11,15 +11,25 @@
             font-weight: bold;
             color: #000;
         }
-        /* 共同一作 * 红色上标 */
+        /* 共同一作 * 红色上标 修复行高遮挡问题 */
         .co-first { 
             color: #c0392b; 
-            font-weight: 500; 
+            font-weight: 500;
+            font-size: 0.7em;
+            line-height: 0;
+            position: relative;
+            top: -0.4em;
+            vertical-align: baseline;
         }
-        /* 共同通讯 # 蓝色上标 */
+        /* 共同通讯 # 蓝色上标 修复行高遮挡问题 */
         .corr { 
             color: #2980b9; 
-            font-weight: 500; 
+            font-weight: 500;
+            font-size: 0.7em;
+            line-height: 0;
+            position: relative;
+            top: -0.4em;
+            vertical-align: baseline;
         }
         /* 说明文字样式 */
         .pub-desc {
@@ -48,13 +58,13 @@
             margin: 28px 0 10px 0;
             color: #222;
         }
-        /* 列表缩进优化 */
+        /* 列表缩进优化，固定行高避免文字重叠 */
         ul {
             padding-left: 20px;
         }
         li {
             margin-bottom: 10px;
-            line-height: 1.6;
+            line-height: 1.7;
         }
     </style>
 </head>
@@ -96,7 +106,7 @@
     <div class="pub-year">2025</div>
     <ul>
         <li>Shao Z, Tang W, Wu H, Kong Y, <span class="me">Hao X</span><sup class="corr">#</sup>. Incorporating multiple functional annotations to improve polygenic risk prediction accuracy. <em>Cell Genomics</em> 2025, 5(6).</li>
-        <li>Kong Y, Tang W, Kang H, Guan Y, Li S, Cao X, Shao Z, Jiang Y<sup class="corr">#</sup>, Wang C<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</span>. Linear and non-linear proteome-wide association studies provide novel insight into venous thromboembolism. <em>Nature Communications</em> 2025, 16(1): 6517.</li>
+        <li>Kong Y, Tang W, Kang H, Guan Y, Li S, Cao X, Shao Z, Jiang Y<sup class="corr">#</sup>, Wang C<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>. Linear and non-linear proteome-wide association studies provide novel insight into venous thromboembolism. <em>Nature Communications</em> 2025, 16(1): 6517.</li>
         <li>Cao X, Jiang M, Guan Y, Li S, Duan C, Gong Y, Kong Y, Shao Z, Wu H, Yao X, Li B, Wang M<sup class="corr">#</sup>, Xu H<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>. Trans-ancestry GWAS identifies 59 loci and improves risk prediction and fine-mapping for kidney stone disease. <em>Nature Communications</em> 2025, 16(1): 3473.</li>
         <li>Lin C, Xia M, Dai Y, Huang Q, Sun Z, Zhang G, Luo R, Peng Q, Li J, Wang X, Lin H, Gao X, Tang H, Shen X, Wang S, Jin L<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>, Zheng Y<sup class="corr">#</sup>. Cross-ancestry analyses of Chinese and European populations reveal insights into the genetic architecture and disease implication of metabolites. <em>Cell Genomics</em> 2025, 5(4).</li>
         <li>Ran L<sup class="co-first">*</sup>, Fang Y<sup class="co-first">*</sup>, Cheng C<sup class="co-first">*</sup>, He Y, Shao Z, Kong Y, Huang H, Xu S, Luo X, Wang W<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>, Wang M<sup class="corr">#</sup>. Genome-wide and phenome-wide studies provided insights into brain glymphatic system function and its clinical associations. <em>Science Advances</em> 2025, 11(3): eadr4606.</li>
