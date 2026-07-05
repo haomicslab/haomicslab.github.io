@@ -11,12 +11,12 @@
             font-weight: bold;
             color: #000;
         }
-        /* 共同一作 # 红色 */
+        /* 共同一作 * 红色上标 */
         .co-first { 
             color: #c0392b; 
             font-weight: 500; 
         }
-        /* 共同通讯 * 蓝色 */
+        /* 共同通讯 # 蓝色上标 */
         .corr { 
             color: #2980b9; 
             font-weight: 500; 
@@ -41,6 +41,21 @@
             font-style: italic;
             font-weight: bold;
         }
+        /* 年份标题样式 */
+        .pub-year {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 28px 0 10px 0;
+            color: #222;
+        }
+        /* 列表缩进优化 */
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
@@ -62,32 +77,75 @@
 <div id="content">
     <h1>Selected Publications</h1>
 
-    <!-- 说明文本 + 谷歌学术链接，符号已配色+上标 -->
+    <!-- 说明文本 + 谷歌学术链接，符号配色上标适配新标注规则 -->
     <div class="pub-desc">
         The full list of publications is available on <a href="https://scholar.google.com/citations?hl=en&user=Q4n3jpEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">my Google Scholar profile</a>.<br>
-        <sup class="co-first">#</sup> authors contributed equally; <sup class="corr">*</sup> co-corresponding authors
+        <sup class="co-first">*</sup> authors contributed equally; <sup class="corr">#</sup> co-corresponding authors
     </div>
 
+    <!-- 2026 -->
+    <div class="pub-year">2026</div>
     <ul>
-        <li><span class="me">Hao X</span><sup class="co-first">#</sup>, Cheng S<sup class="co-first">#</sup>, Wu D<sup class="co-first">#</sup>, Wu T<sup class="corr">*</sup>, Lin X<sup class="corr">*</sup>, Wang C<sup class="corr">*</sup>. Reconstruction of the full transmission dynamics of COVID-19 in Wuhan. <em>Nature</em> 2020, 584(7821): 420-424.</li>
+        <li>Wang Y<sup class="co-first">*</sup><sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="co-first">*</sup>, Yang Z<sup class="co-first">*</sup>, Goldstein AM. Artificial Intelligence and Detection of Hirschsprung Disease. <em>NEJM</em> 2026, 395(1): 99-101.</li>
+        <li>Xiang S<sup class="co-first">*</sup>, Ye Y<sup class="co-first">*</sup>, Cao X, Zeng H, Guan Y, Zhu S, Liu X, Luo D, Kong Y, Shao Z, Zhang B<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>. Proteomic signatures and machine learning based-prediction models for cardiovascular risk in survivors of myocardial infarction. <em>BMC Cardiovascular Disorders</em> 2026, 26(1): 121.</li>
+        <li>Peng B, Jiang M, Li S, Chen X, Cheng S<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>. Cross-phenotype genome-wide association study supports shared genetic etiology between skin and gastrointestinal tract diseases. <em>Journal of Biomedical Research</em> 2026, 40(2): 172-184.</li>
+        <li>Li J<sup class="co-first">*</sup>, Yu X<sup class="co-first">*</sup>, Shen W<sup class="co-first">*</sup>, Wang Y, Wang J, Wang J, Li S, Ma X, Guo J, Dong H, Ma Y, Zhang H, Cai J, Zhang R, Yang J, Zan H, Salvi R, Shi H<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>, Wang H<sup class="corr">#</sup>, Yin S<sup class="corr">#</sup>. Polygenic risk score analysis of noise-induced hearing loss: An integrated cross-sectional and longitudinal study. <em>Hearing Research</em> 2026, 479: 109710.</li>
+    </ul>
 
-        <li>Pan A<sup class="co-first">#</sup>, Liu L<sup class="co-first">#</sup>, Wang C<sup class="co-first">#</sup>, Guo H<sup class="co-first">#</sup>, <span class="me">Hao X</span><sup class="co-first">#</sup>, Wang Q, Huang J, He N, Yu H, Lin X<sup class="corr">*</sup>, Wei S<sup class="corr">*</sup>, Wu T<sup class="corr">*</sup>. Association of public health interventions with the epidemiology of the COVID-19 outbreak in Wuhan, China. <em>JAMA</em> 2020, 323(19): 1-9.</li>
+    <!-- 2025 -->
+    <div class="pub-year">2025</div>
+    <ul>
+        <li>Shao Z, Tang W, Wu H, Kong Y, <span class="me">Hao X</span><sup class="corr">#</sup>. Incorporating multiple functional annotations to improve polygenic risk prediction accuracy. <em>Cell Genomics</em> 2025, 5(6).</li>
+        <li>Kong Y, Tang W, Kang H, Guan Y, Li S, Cao X, Shao Z, Jiang Y<sup class="corr">#</sup>, Wang C<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</span>. Linear and non-linear proteome-wide association studies provide novel insight into venous thromboembolism. <em>Nature Communications</em> 2025, 16(1): 6517.</li>
+        <li>Cao X, Jiang M, Guan Y, Li S, Duan C, Gong Y, Kong Y, Shao Z, Wu H, Yao X, Li B, Wang M<sup class="corr">#</sup>, Xu H<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>. Trans-ancestry GWAS identifies 59 loci and improves risk prediction and fine-mapping for kidney stone disease. <em>Nature Communications</em> 2025, 16(1): 3473.</li>
+        <li>Lin C, Xia M, Dai Y, Huang Q, Sun Z, Zhang G, Luo R, Peng Q, Li J, Wang X, Lin H, Gao X, Tang H, Shen X, Wang S, Jin L<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>, Zheng Y<sup class="corr">#</sup>. Cross-ancestry analyses of Chinese and European populations reveal insights into the genetic architecture and disease implication of metabolites. <em>Cell Genomics</em> 2025, 5(4).</li>
+        <li>Ran L<sup class="co-first">*</sup>, Fang Y<sup class="co-first">*</sup>, Cheng C<sup class="co-first">*</sup>, He Y, Shao Z, Kong Y, Huang H, Xu S, Luo X, Wang W<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>, Wang M<sup class="corr">#</sup>. Genome-wide and phenome-wide studies provided insights into brain glymphatic system function and its clinical associations. <em>Science Advances</em> 2025, 11(3): eadr4606.</li>
+        <li>Du Y<sup class="co-first">*</sup>, Guan Y<sup class="co-first">*</sup>, Shao Z<sup class="co-first">*</sup>, Jiang M<sup class="co-first">*</sup>, Qu M, Kong Y, Wu H, Luo D, Peng S, Li S, Cao X, Chen J<sup class="corr">#</sup>, Ye P<sup class="corr">#</sup>, Xia J<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>. Integrative Genome-wide Association Meta-analysis of Aortic Aneurysm and Dissection Identifies Five Novel Genes. <em>Genomics, Proteomics & Bioinformatics</em> 2025, 23(5).</li>
+        <li>Liu Q, Kong Y, Kang H, Jiang Y<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>. Circulating polyunsaturated fatty acids percentages and coronary artery disease incidence and mortality: Observational and Mendelian randomization analyses. <em>Clinical Nutrition</em> 2025, 48: 122-133.</li>
+    </ul>
 
-        <li><span class="me">Hao X</span><sup class="co-first">#</sup><sup class="corr">*</sup>, Shao Z<sup class="co-first">#</sup>, Zhang N<sup class="co-first">#</sup>, Jiang M<sup class="co-first">#</sup>, Cao X, Li S, Guan Y, Wang C<sup class="corr">*</sup>. Integrative genome-wide analyses identify novel loci associated with kidney stones and provide insights into its genetic architecture. <em>Nature Communications</em> 2023, 14(1): 7498.</li>
+    <!-- 2024 -->
+    <div class="pub-year">2024</div>
+    <ul>
+        <li>Cao X, Li S, Guan Y, Shao Z, Jiang M, Wang M<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>. Blood Calcium, Genetic Risk, and Risk of Incident Kidney Stone: A Population-Based Cohort Study. <em>Mayo Clinic Proceedings</em> 2024, 99(8): 1248-1260.</li>
+        <li>Sun Y<sup class="co-first">*</sup>, Deng J<sup class="co-first">*</sup>, Ding Y, Luo S, Li S, Guan Y, Cao X, <span class="me">Hao X</span><sup class="corr">#</sup>, Hu Y<sup class="corr">#</sup>. Serum albumin, genetic susceptibility, and risk of venous thromboembolism. <em>Research and Practice in Thrombosis and Haemostasis</em> 2024, 8(5): 102509.</li>
+    </ul>
 
-        <li>Cao X, Jiang M, Guan Y, Li S, Duan C, Gong Y, Kong Y, Shao Z, Wu H, Yao X, Li B, Wang M<sup class="corr">*</sup>, Xu H<sup class="corr">*</sup>, <span class="me">Hao X</span><sup class="corr">*</sup>. Trans-ancestry GWAS identifies 59 loci and improves risk prediction and fine-mapping for kidney stone disease. <em>Nature Communications</em> 2025, 16(1): 3473.</li>
+    <!-- 2023 -->
+    <div class="pub-year">2023</div>
+    <ul>
+        <li><span class="me">Hao X</span><sup class="co-first">*</sup><sup class="corr">#</sup>, Shao Z<sup class="co-first">*</sup>, Zhang N<sup class="co-first">*</sup>, Jiang M<sup class="co-first">*</sup>, Cao X, Li S, Guan Y, Wang C<sup class="corr">#</sup>. Integrative genome-wide analyses identify novel loci associated with kidney stones and provide insights into its genetic architecture. <em>Nature Communications</em> 2023, 14(1): 7498.</li>
+        <li>Shi X, Qu M, Jiang Y, Zhu Z, Dai C, Jiang M, Ding L, Yan Y, Wang C, Zhang X, Cheng S<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>. Association of immune cell composition with the risk factors and incidence of acute coronary syndrome. <em>Clinical Epigenetics</em> 2023, 15(1): 115.</li>
+        <li>Chen M, Li S, Zhu Z, Dai C, <span class="me">Hao X</span><sup class="corr">#</sup>. Investigating the shared genetic architecture and causal relationship between pain and neuropsychiatric disorders. <em>Human genetics</em> 2023, 142(3): 431-443.</li>
+    </ul>
 
-        <li>Kong Y, Tang W, Kang H, Guan Y, Li S, Cao X, Shao Z, Jiang Y<sup class="corr">*</sup>, Wang C<sup class="corr">*</sup>, <span class="me">Hao X</span><sup class="corr">*</sup>. Linear and non-linear proteome-wide association studies provide novel insight into venous thromboembolism. <em>Nature Communications</em> 2025, 16(1): 6517.</li>
+    <!-- 2022 -->
+    <div class="pub-year">2022</div>
+    <ul>
+        <li>Ma J<sup class="co-first">*</sup>, <span class="me">Hao X</span><sup class="co-first">*</sup>, Nie X, Yang S, Zhou M, Wang D, Wang B, Cheng M, Ye Z, Xie Y, Wang C<sup class="corr">#</sup>, Chen W<sup class="corr">#</sup>. Longitudinal relationships of polycyclic aromatic hydrocarbons exposure and genetic susceptibility with blood lipid profiles. <em>Environment international</em> 2022, 164: 107259.</li>
+        <li><span class="me">Hao X</span><sup class="co-first">*</sup><sup class="corr">#</sup>, Liang A, Plastow G, Zhang C, Wang Z, Liu J, Salzano A, Gasparrini B, Campanile G, Zhang S, Yang L<sup class="corr">#</sup>. An Integrative Genomic Prediction Approach for Predicting Buffalo Milk Traits by Incorporating Related Cattle QTLs. <em>Genes</em> 2022, 13(8): 1430.</li>
+    </ul>
 
-        <li>Shao Z, Tang W, Wu H, Kong Y, <span class="me">Hao X</span><sup class="corr">*</sup>. Incorporating multiple functional annotations to improve polygenic risk prediction accuracy. <em>Cell Genomics</em> 2025, 5(6).</li>
+    <!-- 2021 -->
+    <div class="pub-year">2021</div>
+    <ul>
+        <li>Dai C, Chen M, Wang C, <span class="me">Hao X</span><sup class="corr">#</sup>. Deconvolution of Bulk Gene Expression Profiles with Single-Cell Transcriptomics to Develop a Cell Type Composition-Based Prognostic Model for Acute Myeloid Leukemia. <em>Frontiers in Cell and Developmental Biology</em> 2021, 9(3137).</li>
+        <li>Wang K, Qu M, Ding L, Shi X, Wang C, Cheng S<sup class="corr">#</sup>, <span class="me">Hao X</span><sup class="corr">#</sup>. Liver and Kidney Function Biomarkers, Blood Cell Traits and Risk of Severe COVID-19: A Mendelian Randomization Study. <em>Frontiers in Genetics</em> 2021, 12(840).</li>
+    </ul>
 
-        <li>Lin C, Xia M, Dai Y, Huang Q, Sun Z, Zhang G, Luo R, Peng Q, Li J, Wang X, Lin H, Gao X, Tang H, Shen X, Wang S, Jin L<sup class="corr">*</sup>, <span class="me">Hao X</span><sup class="corr">*</sup>, Zheng Y<sup class="corr">*</sup>. Cross-ancestry analyses of Chinese and European populations reveal insights into the genetic architecture and disease implication of metabolites. <em>Cell Genomics</em> 2025, 5(4).</li>
+    <!-- 2020 -->
+    <div class="pub-year">2020</div>
+    <ul>
+        <li><span class="me">Hao X</span><sup class="co-first">*</sup>, Cheng S<sup class="co-first">*</sup>, Wu D<sup class="co-first">*</sup>, Wu T<sup class="corr">#</sup>, Lin X<sup class="corr">#</sup>, Wang C<sup class="corr">#</sup>. Reconstruction of the full transmission dynamics of COVID-19 in Wuhan. <em>Nature</em> 2020, 584(7821): 420-424.</li>
+        <li>Pan A<sup class="co-first">*</sup>, Liu L<sup class="co-first">*</sup>, Wang C<sup class="co-first">*</sup>, Guo H<sup class="co-first">*</sup>, <span class="me">Hao X</span><sup class="co-first">*</sup>, Wang Q, Huang J, He N, Yu H, Lin X<sup class="corr">#</sup>, Wei S<sup class="corr">#</sup>, Wu T<sup class="corr">#</sup>. Association of public health interventions with the epidemiology of the COVID-19 outbreak in Wuhan, China. <em>JAMA</em> 2020, 323(19): 1-9.</li>
+        <li><span class="me">Hao X</span><sup class="co-first">*</sup><sup class="corr">#</sup>, Wang K, Dai C, Ding Z, Yang W, Wang C, Cheng S<sup class="corr">#</sup>. Integrative analysis of scRNA-seq and GWAS data pinpoints periportal hepatocytes as the relevant liver cell types for blood lipids. <em>Human molecular genetics</em> 2020, 29(18): 3145-3153.</li>
+    </ul>
 
-        <li>Ran L<sup class="co-first">#</sup>, Fang Y<sup class="co-first">#</sup>, Cheng C<sup class="co-first">#</sup>, He Y, Shao Z, Kong Y, Huang H, Xu S, Luo X, Wang W<sup class="corr">*</sup>, <span class="me">Hao X</span><sup class="corr">*</sup>, Wang M<sup class="corr">*</sup>. Genome-wide and phenome-wide studies provided insights into brain glymphatic system function and its clinical associations. <em>Science Advances</em> 2025, 11(3): eadr4606.</li>
-
-        <li>Du Y<sup class="co-first">#</sup>, Guan Y<sup class="co-first">#</sup>, Shao Z<sup class="co-first">#</sup>, Jiang M<sup class="co-first">#</sup>, Qu M, Kong Y, Wu H, Luo D, Peng S, Li S, Cao X, Chen J<sup class="corr">*</sup>, Ye P<sup class="corr">*</sup>, Xia J<sup class="corr">*</sup>, <span class="me">Hao X</span><sup class="corr">*</sup>. Integrative genome-wide association meta-analysis of aortic aneurysm and dissection identifies five novel genes. <em>Genomics, Proteomics & Bioinformatics</em> 2025, 23(5).</li>
-
-        <li><span class="me">Hao X</span>, Zeng P, Zhang S, Zhou X. Identifying and exploiting trait-relevant tissues with multiple functional annotations in genome-wide association studies. <em>PLoS Genetics</em> 2018;14:e1007186.</li>
+    <!-- Before 2020 -->
+    <div class="pub-year">Before 2020</div>
+    <ul>
+        <li><span class="me">Hao X</span>, Zeng P, Zhang S, Zhou X<sup class="corr">#</sup>. Identifying and exploiting trait-relevant tissues with multiple functional annotations in genome-wide association studies. <em>PLoS Genetics</em> 2018, 14(1): e1007186.</li>
+        <li><span class="me">Hao X</span>, Plastow G, Zhang C, Xu S, Hu Z, Yang T, Wang K, Yang H, Yin X, Liu S, Wang Z, Wang Z<sup class="corr">#</sup>, Zhang S<sup class="corr">#</sup>. Genome-wide association study identifies candidate genes for piglet splay leg syndrome in different populations. <em>BMC Genetics</em> 2017, 18(1): 64.</li>
     </ul>
 </div>
 
