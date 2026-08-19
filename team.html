@@ -11,24 +11,192 @@
     <link rel="canonical" href="https://haomicslab.github.io/team.html">
     <link rel="stylesheet" href="jemdoc.css">
     <style>
-        /* 四列布局样式 */
-        .four-col-list {
-            list-style: none;
-            padding: 0;
-            margin: 10px 0 20px 0;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 8px 15px;
-        }
-        .four-col-list li {
-            padding: 2px 0;
-        }
-        /* 移动端适配：小屏幕自动变回单列 */
-        @media (max-width: 768px) {
-            .four-col-list {
-                grid-template-columns: 1fr;
-            }
-        }
+/* ===================== 粘贴上方完整CSS到此处 ===================== */
+/* 全局基础样式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.65;
+    color: #333;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 25px 25px;
+}
+/* 导航栏：左侧Logo + 右侧菜单 */
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+/* Logo 尺寸 */
+.logo img {
+    height: 30px;
+    width: auto;
+    display: block;
+}
+/* 导航菜单容器 */
+.menu {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+/* 导航链接基础样式 */
+.menu a {
+    text-decoration: none;
+    color: #444;
+    font-size: 17px;
+    padding: 6px 8px;
+    transition: color 0.2s ease;
+}
+/* 链接悬浮效果 */
+.menu a:hover {
+    color: #2980b9;
+}
+/* 当前页面高亮激活态 */
+.menu a.active {
+    color: #2980b9;
+    font-weight: 500;
+    border-bottom: 2px solid #2980b9;
+}
+/* 标题样式 */
+h1, h2 {
+    color: #222;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 23px;
+    margin-top: 30px;
+}
+/* 列表样式（论文列表通用） */
+ul {
+    padding-left: 22px;
+}
+li {
+    margin-bottom: 12px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+/* 列表项悬浮高亮 */
+li:hover {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+/* 页脚 */
+#footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 15px;
+    color: #777;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+/* 个人姓名：黑色加粗 */
+.me {
+    font-weight: bold;
+    color: #000;
+}
+/* 论文说明行链接样式 */
+.pub-desc {
+    margin: 12px 0 20px 0;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+.pub-desc a {
+    color: #2980b9;
+    text-decoration: none;
+}
+.pub-desc a:hover {
+    text-decoration: underline;
+}
+/* 标注颜色 */
+.co-first {
+    color: #c0392b;
+    font-weight: 500;
+}
+.corr {
+    color: #2980b9;
+    font-weight: 500;
+}
+/* 控制上标字号，原生sup自带上标效果 */
+.co-first, .corr {
+    font-size: 0.8em;
+}
+/* 期刊：斜体 + 加粗 */
+em {
+    font-style: italic;
+    font-weight: bold;
+}
+/* ========== 成员头像样式：PI与学生统一竖版钝角长方形大头照 ========== */
+.member-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 24px 0;
+}
+.avatar-circle {
+    width: 70px;
+    height: 90px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-right: 14px;
+    border: 1px solid #ddd;
+    flex-shrink: 0;
+}
+/* PI头像复用完全相同样式，保证大小一致 */
+.member-item .avatar-circle {
+    width: 70px;
+    height: 90px;
+    border-radius: 12px;
+    margin-right: 14px;
+}
+/* ========== 移动端适配（手机/平板） ========== */
+@media (max-width: 768px) {
+    /* 导航栏竖排居中 */
+    #nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    /* 菜单紧凑居中排布 */
+    .menu {
+        justify-content: center;
+        gap: 15px;
+    }
+    /* 移动端全局字号适配 */
+    body {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 26px;
+    }
+    h2 {
+        font-size: 21px;
+    }
+    li {
+        font-size: 16px;
+    }
+    /* 移动端统一缩小头像 */
+    .avatar-circle {
+        width: 56px;
+        height: 72px;
+    }
+    .member-item .avatar-circle {
+        width: 56px;
+        height: 72px;
+    }
+}
     </style>
 </head>
 <body>
@@ -37,7 +205,6 @@
     <div class="logo">
         <img src="./image/logo.png" alt="Haomics Lab Logo">
     </div>
-
     <!-- 右侧导航菜单 -->
     <div class="menu">
         <a href="index.html">Home</a>
@@ -46,33 +213,33 @@
         <a href="news.html">News</a>
     </div>
 </div>
-
     <div id="content">
         <h1>Group Members</h1>
         <h2>Principal Investigator</h2>
         <div class="member-item">
         <img class="avatar-circle" src="./image/xingjie.jpg" alt="Xingjie Hao">
         <p>Xingjie Hao</p>
+        </div>
 
         <h2>Ph.D. Students</h2>
         <ul class="four-col-list">
-            <li>Yifan Kong (2023-  )</li>
-            <li>Xi Cao (2024-  )</li>
-            <li>Siyu Zhu (2025-  )</li> 
-            <li>Yifei Guo (2026-  )</li>
-            <li>Hanbing Ji (2026-  )</li>
+            <li><img class="avatar-circle" src="./image/yifankong.jpg" alt="Yifan Kong"> Yifan Kong (2023-  )</li>
+            <li><img class="avatar-circle" src="./image/xicao.jpg" alt="Xi Cao"> Xi Cao (2024-  )</li>
+            <li><img class="avatar-circle" src="./image/siyuzhu.jpg" alt="Siyu Zhu"> Siyu Zhu (2025-  )</li> 
+            <li><img class="avatar-circle" src="./image/yifeiguo.jpg" alt="Yifei Guo"> Yifei Guo (2026-  )</li>
+            <li><img class="avatar-circle" src="./image/hanbingji.jpg" alt="Hanbing Ji"> Hanbing Ji (2026-  )</li>
         </ul>
        
         <h2>M.M. Students</h2>
         <ul class="four-col-list">
-            <li>Shizheng Xiang (2024-  )</li>
-            <li>Yuge Ye (2024-  )</li>
-            <li>Zilin Lai (2025-  )</li>
-            <li>Huidan Zeng (2025-  )</li> 
-            <li>Yidan Wang (2026-  )</li>
-            <li>Hanyi Deng (2026-  )</li>
-            <li>Anyi Chen (2026-  )</li>
-            <li>Zhihan Ren (2026-  )</li>
+            <li><img class="avatar-circle" src="./image/shizhengxiang.jpg" alt="Shizheng Xiang"> Shizheng Xiang (2024-  )</li>
+            <li><img class="avatar-circle" src="./image/yugeye.jpg" alt="Yuge Ye"> Yuge Ye (2024-  )</li>
+            <li><img class="avatar-circle" src="./image/zilinlai.jpg" alt="Zilin Lai"> Zilin Lai (2025-  )</li>
+            <li><img class="avatar-circle" src="./image/huidanzeng.jpg" alt="Huidan Zeng"> Huidan Zeng (2025-  )</li> 
+            <li><img class="avatar-circle" src="./image/yidanwang.jpg" alt="Yidan Wang"> Yidan Wang (2026-  )</li>
+            <li><img class="avatar-circle" src="./image/hanyideng.jpg" alt="Hanyi Deng"> Hanyi Deng (2026-  )</li>
+            <li><img class="avatar-circle" src="./image/anyichen.jpg" alt="Anyi Chen"> Anyi Chen (2026-  )</li>
+            <li><img class="avatar-circle" src="./image/zhihanren.jpg" alt="Zhihan Ren"> Zhihan Ren (2026-  )</li>
         </ul>
       
         <h2>Alumni</h2>
@@ -84,7 +251,7 @@
             <li>Bo Peng (2022-2025, co-advised M.M.), now a Ph.D. student at Macau University of Science and Technology, Macau. </li>
             <li>Mengya Chen (2020-2023, M.M.), now a Research Assistant at Xiangya Hospital, Changsha. </li>
             <li>Qiuxuan Liu (2020-2025, co-advised Ph.D.), now a Biostatistician at Chia Tai Tianqing Pharmaceutical Group, Nanjing. </li>
-            <li>Minghan Qu (2019-2025, co-advised Ph.D.), now a Research Assistant at Fujian Children's Hospital, Fuzhou. </li>
+            <li>Minghan Qu (2019-2025, co-advised Ph.D.), now a Research Assistant at Fujian Children's Hospital, Fuzhou. </li>
             <li>Chengguqiu Dai (2019-2022, M.M.), now a Senior Biostatistician at Clinchoice, Wuhan. </li>
             <li>Xian Shi (2019-2022, co-advised M.M.), now a SAS Programmer at BeOne Medicines, Wuhan. </li>
             <li>Minghui Jiang (2019-2024, co-advised Ph.D.), now a Research Assistant at Tiantan Hospital, Beijing. </li>
@@ -92,7 +259,6 @@
         </ul>
         
     </div>
-
     <div id="footer">
         &copy; 2026 Haomics Lab. Powered by Doubao.
     </div>
