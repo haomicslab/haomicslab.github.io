@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: Georgia, "Times New Roman", serif;
     line-height: 1.65;
@@ -13,7 +12,6 @@ body {
     margin: 0 auto;
     padding: 0 25px 25px;
 }
-
 /* 导航栏：左侧Logo + 右侧菜单 */
 #nav {
     display: flex;
@@ -24,21 +22,18 @@ body {
     padding: 15px 0;
     border-bottom: 1px solid #eee;
 }
-
 /* Logo 尺寸 */
 .logo img {
     height: 30px;
     width: auto;
     display: block;
 }
-
 /* 导航菜单容器 */
 .menu {
     display: flex;
     gap: 25px;
     flex-wrap: wrap;
 }
-
 /* 导航链接基础样式 */
 .menu a {
     text-decoration: none;
@@ -47,52 +42,43 @@ body {
     padding: 6px 8px;
     transition: color 0.2s ease;
 }
-
 /* 链接悬浮效果 */
 .menu a:hover {
     color: #2980b9;
 }
-
 /* 当前页面高亮激活态 */
 .menu a.active {
     color: #2980b9;
     font-weight: 500;
     border-bottom: 2px solid #2980b9;
 }
-
 /* 标题样式 */
 h1, h2 {
     color: #222;
     font-weight: normal;
     margin-bottom: 1rem;
 }
-
 h1 {
     font-size: 30px;
 }
-
 h2 {
     font-size: 23px;
     margin-top: 30px;
 }
-
 /* 列表样式（论文列表通用） */
 ul {
     padding-left: 22px;
 }
-
 li {
     margin-bottom: 12px;
     font-size: 17px;
     line-height: 1.7;
 }
-
 /* 列表项悬浮高亮 */
 li:hover {
     background-color: #f0f0f0;
     border-radius: 4px;
 }
-
 /* 页脚 */
 #footer {
     margin-top: 50px;
@@ -102,13 +88,11 @@ li:hover {
     border-top: 1px solid #eee;
     padding-top: 15px;
 }
-
 /* 个人姓名：黑色加粗 */
 .me {
     font-weight: bold;
     color: #000;
 }
-
 /* 论文说明行链接样式 */
 .pub-desc {
     margin: 12px 0 20px 0;
@@ -123,7 +107,6 @@ li:hover {
 .pub-desc a:hover {
     text-decoration: underline;
 }
-
 /* 标注颜色 */
 .co-first {
     color: #c0392b;
@@ -133,18 +116,37 @@ li:hover {
     color: #2980b9;
     font-weight: 500;
 }
-
 /* 控制上标字号，原生sup自带上标效果 */
 .co-first, .corr {
     font-size: 0.8em;
 }
-
 /* 期刊：斜体 + 加粗 */
 em {
     font-style: italic;
     font-weight: bold;
 }
-
+/* ========== 成员头像样式：PI与学生统一竖版钝角长方形大头照 ========== */
+.member-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 24px 0;
+}
+.avatar-circle {
+    width: 70px;
+    height: 90px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-right: 14px;
+    border: 1px solid #ddd;
+    flex-shrink: 0;
+}
+/* PI头像复用完全相同样式，保证大小一致 */
+.member-item .avatar-circle {
+    width: 70px;
+    height: 90px;
+    border-radius: 12px;
+    margin-right: 14px;
+}
 /* ========== 移动端适配（手机/平板） ========== */
 @media (max-width: 768px) {
     /* 导航栏竖排居中 */
@@ -153,44 +155,31 @@ em {
         gap: 15px;
         text-align: center;
     }
-
     /* 菜单紧凑居中排布 */
     .menu {
         justify-content: center;
         gap: 15px;
     }
-
     /* 移动端全局字号适配 */
     body {
         font-size: 16px;
     }
-
     h1 {
         font-size: 26px;
     }
-
     h2 {
         font-size: 21px;
     }
-
     li {
         font-size: 16px;
     }
+    /* 移动端统一缩小头像 */
+    .avatar-circle {
+        width: 56px;
+        height: 72px;
+    }
+    .member-item .avatar-circle {
+        width: 56px;
+        height: 72px;
+    }
 }
-
-
-<style>
-.member-item {
-    display:flex;
-    align-items:center;
-    margin:10px 0;
-}
-.avatar-circle{
-    width:56px;
-    height:56px;
-    border-radius:50%;
-    object-fit:cover;
-    margin-right:14px;
-    border:1px solid #ddd;
-}
-</style>
