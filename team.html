@@ -132,21 +132,21 @@ em {
     margin: 10px 0 24px 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px 16px;
+    gap: 32px 16px;
 }
 .member-grid li {
     text-align: center;
     font-size: 17px;
     line-height: 1.6;
 }
-/* 统一钝角长方形头像 */
+/* 放大一倍：PC端 140 × 180px 钝角长方形头像 */
 .avatar-circle {
-    width: 70px;
-    height: 90px;
+    width: 140px;
+    height: 180px;
     border-radius: 12px;
     object-fit: cover;
     border: 1px solid #ddd;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 /* ========== Alumni 普通纵向列表 ========== */
@@ -187,9 +187,10 @@ em {
     .member-grid {
         grid-template-columns: 1fr;
     }
+    /* 移动端头像缩放 */
     .avatar-circle {
-        width: 56px;
-        height: 72px;
+        width: 84px;
+        height: 108px;
     }
     .alumni-list li {
         font-size: 16px;
