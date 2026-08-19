@@ -1,127 +1,185 @@
-/* Haomics Lab Custom Jemdoc CSS
-深蓝极简科研风 | 配色/字体/字号/排版/移动端响应式全套优化
-不修改任何页面正文文字，兼容原版jemdoc页面结构
-*/
+/* 全局基础样式 */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 body {
-    background-color: #ffffff;
-    color: #263238;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-family: Georgia, "Times New Roman", serif;
     line-height: 1.65;
-    padding: 2rem 1rem;
-}
-
-#layout-content {
-    max-width: 960px;
+    color: #333;
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 25px 25px;
 }
-
-/* 标题层级 - 科研深蓝色体系 */
+/* 导航栏：左侧Logo + 右侧菜单 */
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+/* Logo 尺寸 */
+.logo img {
+    height: 30px;
+    width: auto;
+    display: block;
+}
+/* 导航菜单容器 */
+.menu {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+/* 导航链接基础样式 */
+.menu a {
+    text-decoration: none;
+    color: #444;
+    font-size: 17px;
+    padding: 6px 8px;
+    transition: color 0.2s ease;
+}
+/* 链接悬浮效果 */
+.menu a:hover {
+    color: #2980b9;
+}
+/* 当前页面高亮激活态 */
+.menu a.active {
+    color: #2980b9;
+    font-weight: 500;
+    border-bottom: 2px solid #2980b9;
+}
+/* 标题样式 */
+h1, h2 {
+    color: #222;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
 h1 {
-    color: #0F3460;
-    font-size: 28px;
-    margin: 1.8rem 0 1rem;
-    font-weight: 600;
+    font-size: 30px;
 }
 h2 {
-    color: #1A4D7F;
-    font-size: 22px;
-    margin: 1.6rem 0 0.8rem;
-    font-weight: 600;
+    font-size: 23px;
+    margin-top: 30px;
 }
-h3 {
-    color: #1A4D7F;
-    font-size: 19px;
-    margin: 1.4rem 0 0.7rem;
-    font-weight: 500;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-/* 超链接样式 */
-a {
-    color: #2563eb;
-    text-decoration: none;
-}
-a:hover {
-    color: #1d4ed8;
-    text-decoration: underline;
-}
-
-/* 列表：论文、成员条目间距优化 */
-ul, ol {
-    padding-left: 1.8rem;
-    margin-bottom: 1rem;
+/* 列表样式（论文列表通用） */
+ul {
+    padding-left: 22px;
 }
 li {
-    margin-bottom: 0.6rem;
+    margin-bottom: 12px;
+    font-size: 17px;
+    line-height: 1.7;
 }
-
-/* 水平分割线 */
-hr {
-    border: none;
-    border-top: 1px solid #cbd5e1;
-    margin: 2rem 0;
+/* 列表项悬浮高亮 */
+li:hover {
+    background-color: #f0f0f0;
+    border-radius: 4px;
 }
-
-/* 图片全局适配，兼容 image 文件夹图片 */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1rem auto;
-}
-
-/* Jemdoc 原生侧边导航栏 */
-#layout-menu {
-    background-color: #f8fafc;
-    border-right: 1px solid #cbd5e1;
-    padding: 1.5rem 1rem;
-}
-#layout-menu a {
+/* 页脚 */
+#footer {
+    margin-top: 50px;
+    text-align: center;
     font-size: 15px;
-    display: block;
-    padding: 0.3rem 0.2rem;
+    color: #777;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
 }
-
-/* 小字注释、脚注 */
-em, small {
-    font-size: 14px;
-    color: #475569;
+/* 个人姓名：黑色加粗 */
+.me {
+    font-weight: bold;
+    color: #000;
 }
-
-/* ========== 移动端响应式核心（屏幕宽度 < 768px） ========== */
-@media screen and (max-width:768px) {
+/* 论文说明行链接样式 */
+.pub-desc {
+    margin: 12px 0 20px 0;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+.pub-desc a {
+    color: #2980b9;
+    text-decoration: none;
+}
+.pub-desc a:hover {
+    text-decoration: underline;
+}
+/* 标注颜色 */
+.co-first {
+    color: #c0392b;
+    font-weight: 500;
+}
+.corr {
+    color: #2980b9;
+    font-weight: 500;
+}
+/* 控制上标字号，原生sup自带上标效果 */
+.co-first, .corr {
+    font-size: 0.8em;
+}
+/* 期刊：斜体 + 加粗 */
+em {
+    font-style: italic;
+    font-weight: bold;
+}
+/* ========== 成员头像样式：PI与学生统一竖版钝角长方形大头照 ========== */
+.member-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 24px 0;
+}
+.avatar-circle {
+    width: 70px;
+    height: 90px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-right: 14px;
+    border: 1px solid #ddd;
+    flex-shrink: 0;
+}
+/* PI头像复用完全相同样式，保证大小一致 */
+.member-item .avatar-circle {
+    width: 70px;
+    height: 90px;
+    border-radius: 12px;
+    margin-right: 14px;
+}
+/* ========== 移动端适配（手机/平板） ========== */
+@media (max-width: 768px) {
+    /* 导航栏竖排居中 */
+    #nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    /* 菜单紧凑居中排布 */
+    .menu {
+        justify-content: center;
+        gap: 15px;
+    }
+    /* 移动端全局字号适配 */
     body {
-        font-size: 15px;
-        padding: 1rem 0.8rem;
+        font-size: 16px;
     }
-    h1 {font-size: 24px;}
-    h2 {font-size: 20px;}
-    h3 {font-size: 17px;}
-
-    /* 侧边竖导航 → 顶部横向导航 */
-    #layout-menu {
-        width: 100% !important;
-        float: none !important;
-        border-right: none;
-        border-bottom: 1px solid #cbd5e1;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem 1.2rem;
-        padding: 1rem;
+    h1 {
+        font-size: 26px;
     }
-    #layout-content {
-        margin-top: 1.2rem;
-        width: 100% !important;
-        float: none !important;
+    h2 {
+        font-size: 21px;
+    }
+    li {
+        font-size: 16px;
+    }
+    /* 移动端统一缩小头像 */
+    .avatar-circle {
+        width: 56px;
+        height: 72px;
+    }
+    .member-item .avatar-circle {
+        width: 56px;
+        height: 72px;
     }
 }
