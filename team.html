@@ -11,6 +11,7 @@
     <link rel="canonical" href="https://haomicslab.github.io/team.html">
     <link rel="stylesheet" href="jemdoc.css">
     <style>
+/* 全局基础样式 */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,130 +19,181 @@
 }
 body {
     font-family: Georgia, "Times New Roman", serif;
-    color: #222;
-    line-height: 1.75;
+    line-height: 1.65;
+    color: #333;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 28px 40px;
-    background-color: #ffffff;
+    padding: 0 25px 25px;
 }
-/* 导航【和home页面100%完全一致】 */
+/* 导航栏：左侧Logo + 右侧菜单 */
 #nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1100px;
-    margin: 0 auto 38px;
-    padding: 18px 0;
-    border-bottom: 1px solid #e5e7eb;
+    margin: 0 auto 35px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
 }
+/* Logo 尺寸 */
 .logo img {
-    height: 32px;
+    height: 30px;
     width: auto;
     display: block;
 }
+/* 导航菜单容器 */
 .menu {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     flex-wrap: wrap;
 }
+/* 导航链接基础样式 */
 .menu a {
     text-decoration: none;
-    color: #333;
+    color: #444;
     font-size: 17px;
-    padding: 8px 6px;
-    transition: all 0.2s ease;
+    padding: 6px 8px;
+    transition: color 0.2s ease;
 }
+/* 链接悬浮效果 */
 .menu a:hover {
-    color: #1a4480;
+    color: #2980b9;
 }
+/* 当前页面高亮激活态 */
 .menu a.active {
-    color: #1a4480;
+    color: #2980b9;
     font-weight: 500;
-    border-bottom: 2px solid #1a4480;
+    border-bottom: 2px solid #2980b9;
 }
-h1 {
-    font-size: 32px;
-    color: #111827;
-    font-weight: normal;
-    margin-bottom: 20px;
-}
-h2 {
-    font-size: 24px;
+/* 标题样式 */
+h1, h2 {
     color: #222;
     font-weight: normal;
-    margin: 36px 0 16px;
+    margin-bottom: 1rem;
 }
-/* team页面专属成员网格 */
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 23px;
+    margin-top: 30px;
+}
+/* 页脚 */
+#footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 15px;
+    color: #777;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+/* 个人姓名：黑色加粗 */
+.me {
+    font-weight: bold;
+    color: #000;
+}
+/* 论文说明行链接样式 */
+.pub-desc {
+    margin: 12px 0 20px 0;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+.pub-desc a {
+    color: #2980b9;
+    text-decoration: none;
+}
+.pub-desc a:hover {
+    text-decoration: underline;
+}
+/* 标注颜色 */
+.co-first {
+    color: #c0392b;
+    font-weight: 500;
+}
+.corr {
+    color: #2980b9;
+    font-weight: 500;
+}
+/* 控制上标字号，原生sup自带上标效果 */
+.co-first, .corr {
+    font-size: 0.8em;
+}
+/* 期刊：斜体 + 加粗 */
+em {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* ========== 成员四列网格：照片在上，名字在下，无圆点 ========== */
 .member-grid {
     list-style: none;
     padding: 0;
-    margin: 12px 0 28px 0;
+    margin: 10px 0 24px 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 36px 20px;
+    gap: 32px 16px;
 }
 .member-grid li {
     text-align: center;
     font-size: 17px;
-    line-height: 1.65;
-    color: #333;
+    line-height: 1.6;
 }
+/* 放大一倍：PC端 140 × 180px 钝角长方形头像 */
 .avatar-circle {
     width: 140px;
     height: 180px;
     border-radius: 12px;
     object-fit: cover;
-    border: 1px solid #e5e7eb;
-    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
 }
+
+/* ========== Alumni 普通纵向列表 ========== */
 .alumni-list {
-    padding-left: 24px;
+    padding-left: 22px;
 }
 .alumni-list li {
-    font-size: 17px;
     margin-bottom: 12px;
-    color: #333;
+    font-size: 17px;
     line-height: 1.7;
 }
-#footer {
-    margin-top: 60px;
-    text-align: center;
-    font-size: 15px;
-    color: #666;
-    border-top: 1px solid #e5e7eb;
-    padding-top: 20px;
+.alumni-list li:hover {
+    background-color: #f0f0f0;
+    border-radius: 4px;
 }
-/* 手机端【与home页面完全相同】 */
+
+/* ========== 移动端适配 ========== */
 @media (max-width: 768px) {
     #nav {
         flex-direction: column;
-        gap: 18px;
+        gap: 15px;
         text-align: center;
     }
     .menu {
         justify-content: center;
-        gap: 20px;
+        gap: 15px;
     }
-    h1 { font-size: 28px; }
-    h2 { font-size: 21px; }
-    .member-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 28px 12px;
+    body {
+        font-size: 16px;
     }
-    .avatar-circle {
-        width: 110px;
-        height: 142px;
+    h1 {
+        font-size: 26px;
     }
-    body { padding: 0 20px; }
-}
-@media (max-width: 480px) {
+    h2 {
+        font-size: 21px;
+    }
+    /* 手机端改为单列展示 */
     .member-grid {
         grid-template-columns: 1fr;
     }
+    /* 移动端头像缩放 */
     .avatar-circle {
-        width: 120px;
-        height: 154px;
+        width: 84px;
+        height: 108px;
+    }
+    .alumni-list li {
+        font-size: 16px;
     }
 }
     </style>
@@ -160,6 +212,7 @@ h2 {
 </div>
 <div id="content">
     <h1>Group Members</h1>
+
     <h2>Principal Investigator</h2>
     <ul class="member-grid">
         <li>
@@ -167,25 +220,67 @@ h2 {
             <p>Xingjie Hao</p>
         </li>
     </ul>
+
     <h2>Ph.D. Students</h2>
     <ul class="member-grid">
-        <li><img class="avatar-circle" src="./image/yifankong.jpg" alt="Yifan Kong"><p>Yifan Kong (2023‑ )</p></li>
-        <li><img class="avatar-circle" src="./image/xicao.jpg" alt="Xi Cao"><p>Xi Cao (2024‑ )</p></li>
-        <li><img class="avatar-circle" src="./image/siyuzhu.jpg" alt="Siyu Zhu"><p>Siyu Zhu (2025‑ )</p></li>
-        <li><img class="avatar-circle" src="./image/yifeiguo.jpg" alt="Yifei Guo"><p>Yifei Guo (2026‑ )</p></li>
-        <li><img class="avatar-circle" src="./image/hanbingji.jpg" alt="Hanbing Ji"><p>Hanbing Ji (2026‑ )</p></li>
+        <li>
+            <img class="avatar-circle" src="./image/yifankong.jpg" alt="Yifan Kong">
+            <p>Yifan Kong (2023‑ )</p>
+        </li>
+        <li>
+            <img class="avatar-circle" src="./image/xicao.jpg" alt="Xi Cao">
+            <p>Xi Cao (2024‑ )</p>
+        </li>
+        <li>
+            <img class="avatar-circle" src="./image/siyuzhu.jpg" alt="Siyu Zhu">
+            <p>Siyu Zhu (2025‑ )</p>
+        </li>
+        <li>
+            <img class="avatar-circle" src="./image/yifeiguo.jpg" alt="Yifei Guo">
+            <p>Yifei Guo (2026‑ )</p>
+        </li>
+        <li>
+            <img class="avatar-circle" src="./image/hanbingji.jpg" alt="Hanbing Ji">
+            <p>Hanbing Ji (2026‑ )</p>
+        </li>
     </ul>
+
     <h2>M.M. Students</h2>
     <ul class="member-grid">
-        <li><img class="avatar-circle" src="./image/shizhengxiang.jpg" alt="Shizheng Xiang"><p>Shizheng Xiang (2024‑ )</p></li>
-        <li><img class="avatar-circle" src="./image/yugeye.jpg" alt="Yuge Ye"><p>Yuge Ye (2024‑ )</p></li>
-        <li><img class="avatar-circle" src="./image/zilinlai.jpg" alt="Zilin Lai"><p>Zilin Lai (2025‑ )</p></li>
-        <li><img class="avatar-circle" src="./image/huidanzeng.jpg" alt="Huidan Zeng"><p>Huidan Zeng (2025‑ )</p></li>
-        <li><img class="avatar-circle" src="./image/yidanwang.jpg" alt="Yidan Wang"><p>Yidan Wang (2026‑ )</p></li>
-        <li><img class="avatar-circle" src="./image/hanyideng.jpg" alt="Hanyi Deng"><p>Hanyi Deng (2026‑ )</p></li>
-        <li><img class="avatar-circle" src="./image/anyichen.jpg" alt="Anyi Chen"><p>Anyi Chen (2026‑ )</p></li>
-        <li><img class="avatar-circle" src="./image/zhihanren.jpg" alt="Zhihan Ren"><p>Zhihan Ren (2026‑ )</p></li>
+        <li>
+            <img class="avatar-circle" src="./image/shizhengxiang.jpg" alt="Shizheng Xiang">
+            <p>Shizheng Xiang (2024‑ )</p>
+        </li>
+        <li>
+            <img class="avatar-circle" src="./image/yugeye.jpg" alt="Yuge Ye">
+            <p>Yuge Ye (2024‑ )</p>
+        </li>
+        <li>
+            <img class="avatar-circle" src="./image/zilinlai.jpg" alt="Zilin Lai">
+            <p>Zilin Lai (2025‑ )</p>
+        </li>
+        <li>
+            <img class="avatar-circle" src="./image/huidanzeng.jpg" alt="Huidan Zeng">
+            <p>Huidan Zeng (2025‑ )</p>
+        </li>
+        <li>
+            <img class="avatar-circle" src="./image/yidanwang.jpg" alt="Yidan Wang">
+            <p>Yidan Wang (2026‑ )</p>
+        </li>
+        <li>
+            <img class="avatar-circle" src="./image/hanyideng.jpg" alt="Hanyi Deng">
+            <p>Hanyi Deng (2026‑ )</p>
+        </li>
+        <li>
+            <img class="avatar-circle" src="./image/anyichen.jpg" alt="Anyi Chen">
+            <p>Anyi Chen (2026‑ )</p>
+        </li>
+        <li>
+            <img class="avatar-circle" src="./image/zhihanren.jpg" alt="Zhihan Ren">
+            <p>Zhihan Ren (2026‑ )</p>
+        </li>
     </ul>
+
     <h2>Alumni</h2>
     <ul class="alumni-list">
         <li>Yunlong Guan (2023‑2026, M.M.), now a Staff Member at CDC, Hefei. </li>
@@ -203,7 +298,7 @@ h2 {
     </ul>
 </div>
 <div id="footer">
-    &copy; 2026 Haomics Lab. All rights reserved.
+    &copy; 2026 Haomics Lab. Powered by Doubao.
 </div>
 </body>
 </html>
