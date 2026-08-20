@@ -1,134 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home | Xingjie Hao Lab @ HUST </title>
-
-    <!-- SEO Meta -->
-    <meta name="description" content="Haomics Lab led by Xingjie Hao (郝兴杰), Department of Biostatistics, Huazhong University of Science and Technology. Research: statistical genomics, multi-omics, Mendelian randomization, polygenic risk score, complex disease genetics.">
-    <meta name="keywords" content="Xingjie Hao, Haomics Lab, statistical genomics, multi-omics, Mendelian randomization, PRS, complex disease genetics, Huazhong University of Science and Technology, HUST">
-    <meta name="author" content="Xingjie Hao">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://haomicslab.github.io/">
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"Person",
-      "name":"Xingjie Hao",
-      "alternateName":"郝兴杰",
-      "jobTitle":"Associate Professor",
-      "affiliation":{"@type":"Organization","name":"Huazhong University of Science and Technology"},
-      "url":"https://haomicslab.github.io/",
-      "worksFor":{"@type":"Organization","name":"Haomics Lab"},
-      "sameAs":[
-        "https://scholar.google.com/citations?user=Q4n3jpEAAAAJ&hl=en",
-        "https://orcid.org/my-orcid?orcid=0000-0003-1535-9860"
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"ResearchOrganization",
-      "name":"Haomics Lab",
-      "url":"https://haomicslab.github.io/",
-      "description":"Haomics Lab at Huazhong University of Science and Technology focuses on statistical genomics, multi-omics integration and genetic epidemiology of complex diseases.",
-      "founder":{"@type":"Person","name":"Xingjie Hao"}
-    }
-    </script>
-
-    <link rel="stylesheet" href="jemdoc.css">
-    <style>
-        /* 头部图文容器：左右布局 */
-        .header-wrap {
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-        /* 文字区域 */
-        .header-text {
-            flex: 1;
-        }
-        /* 头像样式 */
-        .pi-photo img {
-            width: 180px;      /* 图片宽度，自行调整 */
-            height: auto;
-            border-radius: 6px;/* 圆角，不想圆角删掉此行 */
-            box-shadow: 0 2px 6px #ddd; /* 轻微阴影，可选 */
-        }
-        /* 增大段落间距与行高 */
-        p {
-            margin-bottom: 18px;
-            line-height: 1.7;
-        }
-        /* 移动端：改为上下排列 */
-        @media (max-width: 768px) {
-            .header-wrap {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Xingjie Hao Lab @ HUST</title>
+  <meta name="description" content="Haomics Lab led by Xingjie Hao (郝兴杰), Department of Biostatistics, Huazhong University of Science and Technology. Research: statistical genomics, multi-omics, Mendelian randomization, polygenic risk score, complex disease genetics.">
+  <meta name="keywords" content="Xingjie Hao, Haomics Lab, statistical genomics, multi-omics, Mendelian randomization, PRS, complex disease genetics, Huazhong University of Science and Technology, HUST">
+  <meta name="author" content="Xingjie Hao">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://haomicslab.github.io/">
+  <link rel="stylesheet" href="jemdoc.css">
 </head>
 <body>
-<div id="nav">
-    <!-- 左侧 Logo -->
-    <div class="logo">
-        <img src="./image/logo.png" alt="Haomics Lab Logo">
-    </div>
+  <header id="nav">
+    <div class="logo"><a href="index.html" aria-label="Haomics Lab home"><img src="./image/logo.png" alt="Haomics Lab"></a></div>
+    <nav class="menu" aria-label="Primary navigation">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="team.html">Team</a>
+      <a href="publications.html">Publications</a>
+      <a href="news.html">News</a>
+    </nav>
+  </header>
 
-    <!-- 右侧导航菜单 -->
-    <div class="menu">
-        <a href="index.html" class="active">Home</a>
-        <a href="team.html">Team</a>
-        <a href="publications.html">Publications</a>
-        <a href="news.html">News</a>
-    </div>
-</div>
+  <main id="content">
+    <section class="hero" aria-labelledby="pi-name">
+      <div class="hero-copy">
+        <p class="eyebrow">Principal Investigator</p>
+        <h1 id="pi-name">Xingjie Hao <span>(郝兴杰)</span></h1>
+        <p class="role">Associate Professor<br>Department of Biostatistics<br>School of Public Health<br>Huazhong University of Science and Technology</p>
+      </div>
+      <figure class="pi-photo"><img src="./image/xingjie.jpg" alt="Xingjie Hao"></figure>
+    </section>
 
-<div id="content">
-    <!-- 图文并排容器 -->
-    <div class="header-wrap">
-        <div class="header-text">
-            <h1>Xingjie Hao (郝兴杰) </h1>
-            <p>
-                Associate Professor <br>
-                Department of Biostatistics <br>
-                School of Public Health <br>
-                Huazhong University of Science and Technology
-            </p>
-        </div>
-        <!-- PI 照片区域，替换 src 为你的图片文件名 -->
-        <div class="pi-photo">
-            <img src="./image/xingjie.jpg" alt="Xingjie Hao">
-        </div>
-    </div>
+    <section class="content-section" aria-labelledby="about-heading">
+      <div class="section-kicker">01</div>
+      <div class="section-body">
+        <h2 id="about-heading">About Us</h2>
+        <p>Welcome to Haomics Lab. Our research focuses on genomics and population health. We develop and apply cutting-edge statistical genomics and bioinformatics methods to dissect the genetic mechanisms underlying complex human diseases and improve disease risk prediction.</p>
+        <p>Our methodological research integrates statistical learning and artificial intelligence frameworks to analyze high-dimensional multi-omics data. We develop novel statistical models and computational algorithms, with a particular emphasis on polygenic risk scoring (PRS) and nonlinear omics association methods.</p>
+        <p>We further employ a comprehensive suite of genomic analytical strategies, including GWAS, TWAS, PWAS, PheWAS, MR, and Coloc, to systematically dissect the genetic architecture of complex traits and diseases. Our current research applications primarily center on cardiovascular, metabolic, and urinary system disorders.</p>
+      </div>
+    </section>
 
-    <h2>About Us</h2>
-    <p>
-        Welcome to Haomics Lab. Our research focuses on genomics and population health. We develop and apply cutting-edge statistical genomics and bioinformatics methods to dissect the genetic mechanisms underlying complex human diseases and improve disease risk prediction.
-    </p>
-    <p>
-        Our methodological research integrates statistical learning and artificial intelligence frameworks to analyze high-dimensional multi-omics data. We develop novel statistical models and computational algorithms, with a particular emphasis on polygenic risk scoring (PRS) and nonlinear omics association methods.
-    </p>
-    <p>
-        We further employ a comprehensive suite of genomic analytical strategies, including GWAS, TWAS, PWAS, PheWAS, MR, and Coloc, to systematically dissect the genetic architecture of complex traits and diseases. Our current research applications primarily center on cardiovascular, metabolic, and urinary system disorders.
-    </p>
-
-    <h2>Contact</h2>
-    <p>
-        Email: xingjie@hust.edu.cn <br>
-        Office: Room 323, 1st Building SPH <br>
-        Address: 13 Hangkong Rd, Qiaokou Dist, Wuhan 430030, Hubei, P.R.China
-    </p>
-</div>
-
-<div id="footer">
-    &copy; 2026 Haomics Lab. Powered by AI.
-</div>
+    <section class="content-section contact-section" aria-labelledby="contact-heading">
+      <div class="section-kicker">02</div>
+      <div class="section-body">
+        <h2 id="contact-heading">Contact</h2>
+        <dl class="contact-grid">
+          <dt>Email</dt><dd><a href="mailto:xingjie@hust.edu.cn">xingjie@hust.edu.cn</a></dd>
+          <dt>Office</dt><dd>Room 323, 1st Building SPH</dd>
+          <dt>Address</dt><dd>13 Hangkong Rd, Qiaokou Dist, Wuhan 430030, Hubei, P.R.China</dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+  <footer id="footer">© 2026 Haomics Lab. Powered by AI.</footer>
 </body>
 </html>
