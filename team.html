@@ -1,304 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Team | Xingjie Hao Lab @ HUST</title>
-    <meta name="description" content="Lab members of Haomics Lab led by Xingjie Hao at HUST. Researchers working on statistical genomics, multi‑omics, Mendelian randomization and complex disease genetics.">
-    <meta name="keywords" content="Haomics Lab, Xingjie Hao, lab members, team, statistical genomics, Huazhong University of Science and Technology, HUST">
-    <meta name="author" content="Xingjie Hao">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://haomicslab.github.io/team.html">
-    <link rel="stylesheet" href="jemdoc.css">
-    <style>
-/* 全局基础样式 */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.65;
-    color: #333;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 25px 25px;
-}
-/* 导航栏：左侧Logo + 右侧菜单 */
-#nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: 0 auto 35px;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-}
-/* Logo 尺寸 */
-.logo img {
-    height: 30px;
-    width: auto;
-    display: block;
-}
-/* 导航菜单容器 */
-.menu {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-/* 导航链接基础样式 */
-.menu a {
-    text-decoration: none;
-    color: #444;
-    font-size: 17px;
-    padding: 6px 8px;
-    transition: color 0.2s ease;
-}
-/* 链接悬浮效果 */
-.menu a:hover {
-    color: #2980b9;
-}
-/* 当前页面高亮激活态 */
-.menu a.active {
-    color: #2980b9;
-    font-weight: 500;
-    border-bottom: 2px solid #2980b9;
-}
-/* 标题样式 */
-h1, h2 {
-    color: #222;
-    font-weight: normal;
-    margin-bottom: 1rem;
-}
-h1 {
-    font-size: 30px;
-}
-h2 {
-    font-size: 23px;
-    margin-top: 30px;
-}
-/* 页脚 */
-#footer {
-    margin-top: 50px;
-    text-align: center;
-    font-size: 15px;
-    color: #777;
-    border-top: 1px solid #eee;
-    padding-top: 15px;
-}
-/* 个人姓名：黑色加粗 */
-.me {
-    font-weight: bold;
-    color: #000;
-}
-/* 论文说明行链接样式 */
-.pub-desc {
-    margin: 12px 0 20px 0;
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-}
-.pub-desc a {
-    color: #2980b9;
-    text-decoration: none;
-}
-.pub-desc a:hover {
-    text-decoration: underline;
-}
-/* 标注颜色 */
-.co-first {
-    color: #c0392b;
-    font-weight: 500;
-}
-.corr {
-    color: #2980b9;
-    font-weight: 500;
-}
-/* 控制上标字号，原生sup自带上标效果 */
-.co-first, .corr {
-    font-size: 0.8em;
-}
-/* 期刊：斜体 + 加粗 */
-em {
-    font-style: italic;
-    font-weight: bold;
-}
-
-/* ========== 成员四列网格：照片在上，名字在下，无圆点 ========== */
-.member-grid {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 24px 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 32px 16px;
-}
-.member-grid li {
-    text-align: center;
-    font-size: 17px;
-    line-height: 1.6;
-}
-/* 放大一倍：PC端 140 × 180px 钝角长方形头像 */
-.avatar-circle {
-    width: 140px;
-    height: 180px;
-    border-radius: 12px;
-    object-fit: cover;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-}
-
-/* ========== Alumni 普通纵向列表 ========== */
-.alumni-list {
-    padding-left: 22px;
-}
-.alumni-list li {
-    margin-bottom: 12px;
-    font-size: 17px;
-    line-height: 1.7;
-}
-.alumni-list li:hover {
-    background-color: #f0f0f0;
-    border-radius: 4px;
-}
-
-/* ========== 移动端适配 ========== */
-@media (max-width: 768px) {
-    #nav {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    .menu {
-        justify-content: center;
-        gap: 15px;
-    }
-    body {
-        font-size: 16px;
-    }
-    h1 {
-        font-size: 26px;
-    }
-    h2 {
-        font-size: 21px;
-    }
-    /* 手机端改为单列展示 */
-    .member-grid {
-        grid-template-columns: 1fr;
-    }
-    /* 移动端头像缩放 */
-    .avatar-circle {
-        width: 84px;
-        height: 108px;
-    }
-    .alumni-list li {
-        font-size: 16px;
-    }
-}
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team | Xingjie Hao Lab @ HUST</title>
+  <meta name="description" content="Lab members of Haomics Lab led by Xingjie Hao at HUST. Researchers working on statistical genomics, multi‑omics, Mendelian randomization and complex disease genetics.">
+  <meta name="keywords" content="Haomics Lab, Xingjie Hao, lab members, team, statistical genomics, Huazhong University of Science and Technology, HUST">
+  <meta name="author" content="Xingjie Hao">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://haomicslab.github.io/team.html">
+  <link rel="stylesheet" href="jemdoc.css">
 </head>
 <body>
-<div id="nav">
-    <div class="logo">
-        <img src="./image/logo.png" alt="Haomics Lab Logo">
-    </div>
-    <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="team.html" class="active">Team</a>
-        <a href="publications.html">Publications</a>
-        <a href="news.html">News</a>
-    </div>
-</div>
-<div id="content">
-    <h1>Group Members</h1>
+  <header id="nav">
+    <div class="logo"><a href="index.html" aria-label="Haomics Lab home"><img src="./image/logo.png" alt="Haomics Lab"></a></div>
+    <nav class="menu" aria-label="Primary navigation">
+      <a href="index.html">Home</a><a href="team.html" class="active" aria-current="page">Team</a><a href="publications.html">Publications</a><a href="news.html">News</a>
+    </nav>
+  </header>
+  <main id="content">
+    <header class="page-intro"><p class="eyebrow">People</p><h1>Group Members</h1></header>
 
-    <h2>Principal Investigator</h2>
-    <ul class="member-grid">
-        <li>
-            <img class="avatar-circle" src="./image/xingjie.jpg" alt="Xingjie Hao">
-            <p>Xingjie Hao</p>
-        </li>
-    </ul>
+    <section class="people-section" aria-labelledby="pi-heading">
+      <h2 id="pi-heading">Principal Investigator</h2>
+      <ul class="member-grid pi-grid"><li class="member-card"><div class="member-photo"><img src="./image/xingjie.jpg" alt="Xingjie Hao"></div><p>Xingjie Hao</p></li></ul>
+    </section>
 
-    <h2>Ph.D. Students</h2>
-    <ul class="member-grid">
-        <li>
-            <img class="avatar-circle" src="./image/yifankong.jpg" alt="Yifan Kong">
-            <p>Yifan Kong (2023‑ )</p>
-        </li>
-        <li>
-            <img class="avatar-circle" src="./image/xicao.jpg" alt="Xi Cao">
-            <p>Xi Cao (2024‑ )</p>
-        </li>
-        <li>
-            <img class="avatar-circle" src="./image/siyuzhu.jpg" alt="Siyu Zhu">
-            <p>Siyu Zhu (2025‑ )</p>
-        </li>
-        <li>
-            <img class="avatar-circle" src="./image/yifeiguo.jpg" alt="Yifei Guo">
-            <p>Yifei Guo (2026‑ )</p>
-        </li>
-        <li>
-            <img class="avatar-circle" src="./image/hanbingji.jpg" alt="Hanbing Ji">
-            <p>Hanbing Ji (2026‑ )</p>
-        </li>
-    </ul>
+    <section class="people-section" aria-labelledby="phd-heading">
+      <h2 id="phd-heading">Ph.D. Students</h2>
+      <ul class="member-grid">
+        <li class="member-card"><div class="member-photo"><img src="./image/yifankong.jpg" alt="Yifan Kong"></div><p>Yifan Kong (2023‑ )</p></li>
+        <li class="member-card"><div class="member-photo"><img src="./image/xicao.jpg" alt="Xi Cao"></div><p>Xi Cao (2024‑ )</p></li>
+        <li class="member-card"><div class="member-photo"><img src="./image/siyuzhu.jpg" alt="Siyu Zhu"></div><p>Siyu Zhu (2025‑ )</p></li>
+        <li class="member-card"><div class="member-photo"><img src="./image/yifeiguo.jpg" alt="Yifei Guo"></div><p>Yifei Guo (2026‑ )</p></li>
+        <li class="member-card"><div class="member-photo"><img src="./image/hanbingji.jpg" alt="Hanbing Ji"></div><p>Hanbing Ji (2026‑ )</p></li>
+      </ul>
+    </section>
 
-    <h2>M.M. Students</h2>
-    <ul class="member-grid">
-        <li>
-            <img class="avatar-circle" src="./image/shizhengxiang.jpg" alt="Shizheng Xiang">
-            <p>Shizheng Xiang (2024‑ )</p>
-        </li>
-        <li>
-            <img class="avatar-circle" src="./image/yugeye.jpg" alt="Yuge Ye">
-            <p>Yuge Ye (2024‑ )</p>
-        </li>
-        <li>
-            <img class="avatar-circle" src="./image/zilinlai.jpg" alt="Zilin Lai">
-            <p>Zilin Lai (2025‑ )</p>
-        </li>
-        <li>
-            <img class="avatar-circle" src="./image/huidanzeng.jpg" alt="Huidan Zeng">
-            <p>Huidan Zeng (2025‑ )</p>
-        </li>
-        <li>
-            <img class="avatar-circle" src="./image/yidanwang.jpg" alt="Yidan Wang">
-            <p>Yidan Wang (2026‑ )</p>
-        </li>
-        <li>
-            <img class="avatar-circle" src="./image/hanyideng.jpg" alt="Hanyi Deng">
-            <p>Hanyi Deng (2026‑ )</p>
-        </li>
-        <li>
-            <img class="avatar-circle" src="./image/anyichen.jpg" alt="Anyi Chen">
-            <p>Anyi Chen (2026‑ )</p>
-        </li>
-        <li>
-            <img class="avatar-circle" src="./image/zhihanren.jpg" alt="Zhihan Ren">
-            <p>Zhihan Ren (2026‑ )</p>
-        </li>
-    </ul>
+    <section class="people-section" aria-labelledby="mm-heading">
+      <h2 id="mm-heading">M.M. Students</h2>
+      <ul class="member-grid">
+        <li class="member-card"><div class="member-photo"><img src="./image/shizhengxiang.jpg" alt="Shizheng Xiang"></div><p>Shizheng Xiang (2024‑ )</p></li>
+        <li class="member-card"><div class="member-photo"><img src="./image/yugeye.jpg" alt="Yuge Ye"></div><p>Yuge Ye (2024‑ )</p></li>
+        <li class="member-card"><div class="member-photo"><img src="./image/zilinlai.jpg" alt="Zilin Lai"></div><p>Zilin Lai (2025‑ )</p></li>
+        <li class="member-card"><div class="member-photo"><img src="./image/huidanzeng.jpg" alt="Huidan Zeng"></div><p>Huidan Zeng (2025‑ )</p></li>
+        <li class="member-card"><div class="member-photo"><img src="./image/yidanwang.jpg" alt="Yidan Wang"></div><p>Yidan Wang (2026‑ )</p></li>
+        <li class="member-card"><div class="member-photo"><img src="./image/hanyideng.jpg" alt="Hanyi Deng"></div><p>Hanyi Deng (2026‑ )</p></li>
+        <li class="member-card"><div class="member-photo"><img src="./image/anyichen.jpg" alt="Anyi Chen"></div><p>Anyi Chen (2026‑ )</p></li>
+        <li class="member-card"><div class="member-photo"><img src="./image/zhihanren.jpg" alt="Zhihan Ren"></div><p>Zhihan Ren (2026‑ )</p></li>
+      </ul>
+    </section>
 
-    <h2>Alumni</h2>
-    <ul class="alumni-list">
-        <li>Yunlong Guan (2023‑2026, M.M.), now a Staff Member at CDC, Hefei. </li>
-        <li>Zeyu Gan (2023‑2025, B.M.), now a M.S. student at The University of North Carolina, Chapel Hill, NC, USA. </li>
-        <li>Zhonghe Shao (2022‑2026, Ph.D.), now a Postdoc at Yale University, New Haven, CT, USA. </li>
-        <li>Si Li (2022‑2025, M.M.), now a Staff Member at CDC, Shenzhen. </li>
-        <li>Bo Peng (2022‑2025, co‑advised M.M.), now a Ph.D. student at Macau University of Science and Technology, Macau. </li>
-        <li>Mengya Chen (2020‑2023, M.M.), now a Research Assistant at Xiangya Hospital, Changsha. </li>
-        <li>Qiuxuan Liu (2020‑2025, co‑advised Ph.D.), now a Biostatistician at Chia Tai Tianqing Pharmaceutical Group, Nanjing. </li>
-        <li>Minghan Qu (2019‑2025, co‑advised Ph.D.), now a Research Assistant at Fujian Children's Hospital, Fuzhou. </li>
-        <li>Chengguqiu Dai (2019‑2022, M.M.), now a Senior Biostatistician at Clinchoice, Wuhan. </li>
-        <li>Xian Shi (2019‑2022, co‑advised M.M.), now a SAS Programmer at BeOne Medicines, Wuhan. </li>
-        <li>Minghui Jiang (2019‑2024, co‑advised Ph.D.), now a Research Assistant at Tiantan Hospital, Beijing. </li>
-        <li>Kai Wang (2018‑2021, co‑advised Ph.D.), now an Associate Director of Statistics at Zhizhi Medicine, Wuhan. </li>
-    </ul>
-</div>
-<div id="footer">
-    &copy; 2026 Haomics Lab. Powered by AI.
-</div>
+    <section class="people-section alumni-section" aria-labelledby="alumni-heading">
+      <h2 id="alumni-heading">Alumni</h2>
+      <ol class="alumni-list">
+        <li><p>Yunlong Guan (2023‑2026, M.M.), now a Staff Member at CDC, Hefei.</p></li>
+        <li><p>Zeyu Gan (2023‑2025, B.M.), now a M.S. student at The University of North Carolina, Chapel Hill, NC, USA.</p></li>
+        <li><p>Zhonghe Shao (2022‑2026, Ph.D.), now a Postdoc at Yale University, New Haven, CT, USA.</p></li>
+        <li><p>Si Li (2022‑2025, M.M.), now a Staff Member at CDC, Shenzhen.</p></li>
+        <li><p>Bo Peng (2022‑2025, co‑advised M.M.), now a Ph.D. student at Macau University of Science and Technology, Macau.</p></li>
+        <li><p>Mengya Chen (2020‑2023, M.M.), now a Research Assistant at Xiangya Hospital, Changsha.</p></li>
+        <li><p>Qiuxuan Liu (2020‑2025, co‑advised Ph.D.), now a Biostatistician at Chia Tai Tianqing Pharmaceutical Group, Nanjing.</p></li>
+        <li><p>Minghan Qu (2019‑2025, co‑advised Ph.D.), now a Research Assistant at Fujian Children's Hospital, Fuzhou.</p></li>
+        <li><p>Chengguqiu Dai (2019‑2022, M.M.), now a Senior Biostatistician at Clinchoice, Wuhan.</p></li>
+        <li><p>Xian Shi (2019‑2022, co‑advised M.M.), now a SAS Programmer at BeOne Medicines, Wuhan.</p></li>
+        <li><p>Minghui Jiang (2019‑2024, co‑advised Ph.D.), now a Research Assistant at Tiantan Hospital, Beijing.</p></li>
+        <li><p>Kai Wang (2018‑2021, co‑advised Ph.D.), now an Associate Director of Statistics at Zhizhi Medicine, Wuhan.</p></li>
+      </ol>
+    </section>
+  </main>
+  <footer id="footer">© 2026 Haomics Lab. Powered by AI.</footer>
 </body>
 </html>
