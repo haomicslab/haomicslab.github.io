@@ -155,31 +155,57 @@ address a:hover { color: var(--blue); text-decoration: underline; text-underline
 /* Research figure below About Us */
 .research-overview {
   width: 100%;
-  margin: 18px auto 26px;
+  margin: 18px auto 28px;
+  text-align: center;
 }
 
 .research-overview a {
-  display: block;
+  display: flex;
   width: 100%;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   cursor: zoom-in;
 }
 
-.research-overview img {
+.home-overview .research-overview img {
   display: block;
-  width: 100%;
-  height: auto;
+
+  /* 桌面端显示得稍小一些 */
+  width: 90%;
+  max-width: 1300px;
+
+  /* 保持图片原始长宽比 */
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+
   margin: 0 auto;
   border: 0;
   border-radius: 14px;
 }
 
+/* Tablet */
+@media screen and (max-width: 900px) {
+  .home-overview .research-overview img {
+    width: 96%;
+    max-width: 100%;
+    height: auto !important;
+  }
+}
+
+/* Mobile */
 @media screen and (max-width: 700px) {
   .research-overview {
     margin: 14px auto 22px;
   }
 
-  .research-overview img {
+  .home-overview .research-overview img {
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;
+    object-fit: contain !important;
     border-radius: 9px;
   }
 }
